@@ -1,0 +1,48 @@
+*{box-sizing: border-box;}
+
+
+@font-face{
+  font-family: 'Roboto-Light';
+  src: url('./assets/font/roboto/Roboto-Thin.ttf')
+}
+
+@font-face{
+  font-family: 'Roboto-Bold';
+  src: url('./assets/font/roboto/Roboto-Bold.ttf')
+}
+
+html { 
+  /* background: url(./assets/backgroundBit.jpg) no-repeat center center fixed;  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Roboto-Light';
+  /* color: white */
+}
+
+a {
+  text-decoration: none;
+} 
+
+.app {
+  max-width: 980px;
+  padding: 20px;
+  border: 1px solid #546674;
+  border-radius: 5px;
+  margin: 30px auto; 
+}
+
+.app .app-content {
+  padding: 20px 0 0 0;
+  height: max-content;
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+
+.app [class^="flaticon-"]:before,
+.app [class*=" flaticon-"]:before,
+.app [class^="flaticon-"]:after,
+.app [class*=" flaticon-"]:after {
+    margin: 0; 
+}
