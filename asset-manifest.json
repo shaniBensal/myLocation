@@ -1,8 +1,12 @@
 {
-  "main.css": "static/css/main.ffdf7518.css",
-  "main.css.map": "static/css/main.ffdf7518.css.map",
-  "main.js": "static/js/main.4db15a81.js",
-  "main.js.map": "static/js/main.4db15a81.js.map",
+  "main.css": "static/css/main.67df2722.css",
+  "main.css.map": "static/css/main.67df2722.css.map",
+  "main.js": "static/js/main.7ea09bb2.js",
+  "main.js.map": "static/js/main.7ea09bb2.js.map",
   "static\\media\\Roboto-Bold.ttf": "static/media/Roboto-Bold.ee7b96fa.ttf",
-  "static\\media\\Roboto-Thin.ttf": "static/media/Roboto-Thin.89e2666c.ttf"
+  "static\\media\\Roboto-Thin.ttf": "static/media/Roboto-Thin.89e2666c.ttf",
+  "static\\media\\gym.jpg": "static/media/gym.0195148e.jpg",
+  "static\\media\\map-locations.jpg": "static/media/map-locations.f5e9d226.jpg",
+  "static\\media\\restaurant.jpg": "static/media/restaurant.8f96d2ae.jpg",
+  "static\\media\\where-to-go.jpg": "static/media/where-to-go.b6895da8.jpg"
 }
