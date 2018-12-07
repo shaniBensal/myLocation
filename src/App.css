@@ -12,25 +12,15 @@
 }
 
 html { 
-  /* background: url(./assets/backgroundBit.jpg) no-repeat center center fixed;  */
-  -webkit-background-size: cover;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
   font-family: 'Roboto-Light';
-  /* color: white */
 }
 
-a {
-  text-decoration: none;
-} 
-
 .app {
-  max-width: 980px;
-  padding: 20px;
-  border: 1px solid #546674;
-  border-radius: 5px;
-  margin: 30px auto; 
+  text-align: center;
 }
 
 .app .app-content {

@@ -1,5 +1,6 @@
 import React from 'react';
 import LocationPreview from '../LocationPreview/LocationPreview'
+import './LocationList.css'
 import { Link } from 'react-router-dom';
 
 const remove = (onRemoveLocation, locationId) => {
@@ -9,7 +10,7 @@ const remove = (onRemoveLocation, locationId) => {
 const LocationList = (props) => {
     const locationPreview = props.locations.map((location) => {
         return (
-            <li key={location._id} className="location-list-item">
+            <li key={location._id} className="location-list-item list-item">
                 <Link to={`/locationDetails/${location._id}`}><LocationPreview location={location} onRemove={locationId => remove(props.onRemoveLocation, locationId)} /></Link>
             </li>
         )
@@ -18,11 +19,8 @@ const LocationList = (props) => {
 
     return (
         <div className="location-list">
-            <ul>
+            <ul className="ul-list">
                 {locationPreview}
-                <li className="add-location-button">
-                    <Link to={`/locationEdit/`}>+</Link>
-                </li>
             </ul>
         </div>
     );

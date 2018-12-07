@@ -1,0 +1,27 @@
+
+.location-app{
+    margin-right: 40px;
+}
+
+.head{
+    text-align: center;
+}
+
+.location-app img{
+    height: 140px;
+    float: right;
+}
+
+.where-image img{
+    float: left;
+}
+
+.add-button{
+    border-radius: 50%;
+    font-size: 40px;
+    float: right;
+    position: sticky;
+    z-index: 1;
+    bottom: 10px;
+    left: 15px;
+  }

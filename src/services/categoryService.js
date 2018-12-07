@@ -9,7 +9,6 @@ const categories = storageService.loadFromStorage(CATEGORY_KEY) || defaultData.d
 
 function getCategories() {
     return new Promise((resolve, reject) => {
-        storageService.loadFromStorage(CATEGORY_KEY)
         return resolve(categories);
     })
 }

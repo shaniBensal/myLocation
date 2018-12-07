@@ -1,0 +1,20 @@
+
+/* .category-preview{
+    font-size: 20px;
+    width: 75%;
+} */
+
+.category-preview{
+    width: 80%;
+    padding: 20px;
+    /* margin: 20px 70px; */
+    border: 1px solid black;
+    background-color: #d6e9f4;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    left: 5%;
+    font-size: 15px;
+    font-weight:10px; 
+}

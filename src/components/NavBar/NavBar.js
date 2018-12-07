@@ -1,20 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
+import './navBar.css'
 
-const Header = () => {
+const NavBar = () => {
     return (
-        <ul>
-            <li>
-                <NavLink to="/location" exact activeStyle={{ color: 'red' }} >My Locations</NavLink>
+        <ul className='nav-list flex flex-wrap margin-zero text-align-center'>
+            <li className="nav-item list-item flex justify-center align-items-center">
+                <NavLink to="/location" exact activeStyle={{ color: '#47a3d8' }} >My Locations</NavLink>
             </li>
-            <li>
-                <NavLink to="/category" exact activeStyle={{ color: 'red' }} >My categories</NavLink>
+            <li className="nav-item list-item flex justify-center align-items-center">
+                <NavLink to="/category" exact activeStyle={{ color: '#47a3d8' }} >My categories</NavLink>
             </li>
-            <li>
-                <NavLink to="/about-me" activeStyle={{ color: 'red' }} >About Me</NavLink>
+            <li className="nav-item list-item flex justify-center align-items-center">
+                <NavLink to="/about-me" activeStyle={{ color: '#47a3d8' }} >About Me</NavLink>
             </li>
         </ul>
     );
 };
 
-export default Header;
+export default NavBar;
+
+

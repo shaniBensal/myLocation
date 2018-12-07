@@ -65,10 +65,10 @@ class LocationEdit extends Component {
                 }
                 <form onSubmit={this.handleSubmit}>
                     <div><input className="edit-input" type="text" name="name" defaultValue={this.state.location.name} onChange={this.handleInputChange} placeholder="Name" required /></div>
-                    <div><input className="edit-input" type="text" name="address" defaultValue={this.state.location.adress} onChange={this.handleInputChange} placeholder="Address" required /></div>
+                    <div><input className="edit-input" type="text" name="adress" defaultValue={this.state.location.adress} onChange={this.handleInputChange} placeholder="Address" required /></div>
                     <div><input className="edit-input" type="number" step="any" name="lat" defaultValue={this.state.location.lat} onChange={this.handleInputChange} placeholder="Langtitude" required /></div>
                     <div><input className="edit-input" type="number" step="any" name="long" defaultValue={this.state.location.long} onChange={this.handleInputChange} placeholder="Longtitude" required /></div>
-                    <div><select defaultValue={this.state.location.category} onChange={this.handleInputChange}>
+                    <div><select defaultValue={this.categoryStore.categories[0]} onChange={this.handleInputChange}>
                         {categoryOptions}
                     </select></div>
                     <input className="submit" type="submit" />

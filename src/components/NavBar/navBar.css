@@ -1,0 +1,21 @@
+
+.nav-list {
+    padding-right: 20px;
+    background-color: rgb(238, 238, 238);
+    margin-bottom: 15px;
+    width: 100vw;
+}
+
+.nav-item{
+    width: 130px;
+    height: 80px;
+  }
+
+  .nav-item a{
+      color: #0b4c8c;
+      font-family: 'Roboto-Bold'
+  }
+
+  .nav-item a:hover{
+      color: #47a3d8;
+  }

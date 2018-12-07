@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="app">
           <NavBar />
           <Switch>
             <Route component={LocationPage} path='/location'/>

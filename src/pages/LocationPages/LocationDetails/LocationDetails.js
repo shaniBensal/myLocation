@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './LocationDetails.css'
-import LocationOnMap from '../../../components/LocationCMP/LocationOnMap/LocationOnMap'
 import { observer, inject } from 'mobx-react';
-
+import LocationOnMap from '../../../components/LocationCMP/LocationOnMap/LocationOnMap'
 
 @inject('store')
 @observer
