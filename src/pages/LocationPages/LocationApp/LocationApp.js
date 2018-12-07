@@ -43,9 +43,9 @@ export default class LocationApp extends Component {
         this.locationStore.getLocations(null);
     }
 
-    toggleSortedList = () => {
-        this.locationStore.sortLocations;
-    };
+    // toggleSortedList = () => {
+    //     this.locationStore.sortLocations;
+    // };
 
     render() {
         const { locations } = this.locationStore;
@@ -53,9 +53,9 @@ export default class LocationApp extends Component {
         return (
             <div className="location-app">
                 <div className="flex justify-space-around">
-                    <img src={whereTogo} />
+                    <img src={whereTogo} alt="Smiley face" />
                     <h1>My Locations! <label onClick={this.toggleSortedList}><FontAwesomeIcon icon={faSort} /></label></h1>
-                    <img src={map} />
+                    <img src={map} alt="Smiley face"/>
                 </div>
                 {this.state.isFilteredList ? <button onClick={this.showAllLocations}>Show All</button> : ''}
                 <LocationList locations={locations}

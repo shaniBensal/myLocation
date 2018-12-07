@@ -62,9 +62,9 @@ export default class CategoryApp extends Component {
         return (
             <div className="category-app">
                 <div className="flex justify-space-between">
-                    <img src={gym} />
+                    <img src={gym} alt="Smiley face" />
                     <h1>My Categories!</h1>
-                    <img src={rest} />
+                    <img src={rest} alt="Smiley face" />
                 </div>
                 {
                     editMode ? <div> <CategoryEdit categoryToEdit={this.state.newCategory}

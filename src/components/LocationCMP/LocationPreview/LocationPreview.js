@@ -2,7 +2,7 @@ import React from 'react';
 
 import './LocationPreview.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const remove = (event, onRemove, locationId) => {
     event.preventDefault();
