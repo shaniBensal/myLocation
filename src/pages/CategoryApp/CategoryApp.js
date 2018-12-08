@@ -4,9 +4,10 @@ import CategoryEdit from '../../components/CategorysCMP/CategoryEdit/CategoryEdi
 
 import gym from '../../assets/categorisPic/gym.jpg';
 import rest from '../../assets/categorisPic/restaurant.jpg';
-// import shop from '../../assets/categorisPic/shopping.jpg';
-// import pab from '../../assets/categorisPic/pab.jpg';
+
 import './CategoryApp.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 //mobx additions
 import { observer, inject } from 'mobx-react';
@@ -67,9 +68,9 @@ export default class CategoryApp extends Component {
                     <img src={rest} alt="Smiley face" />
                 </div>
                 {
-                    editMode ? <div> <CategoryEdit categoryToEdit={this.state.newCategory}
+                    editMode ? <div className="edit-category flex"> <CategoryEdit categoryToEdit={this.state.newCategory}
                         onSubmit={this.submit} />
-                        <button onClick={this.toggleEdit}>cancel</button> </div>
+                        <label className="cancel-label" onClick={this.toggleEdit}><FontAwesomeIcon icon={faTimes} /></label> </div>
                         : <button onClick={this.toggleEdit}> add new category</button>
                 }
                 <CategoryList categories={categories}

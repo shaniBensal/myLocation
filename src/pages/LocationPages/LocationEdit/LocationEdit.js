@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import locationService from '../../../services/locationService'
 import { Link } from 'react-router-dom';
-// import './EditLocation.css'
+
+import './LocationEdit.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faEdit } from '@fortawesome/free-solid-svg-icons'
+
 import { observer, inject } from 'mobx-react';
 
 @inject('store')
@@ -56,19 +60,24 @@ class LocationEdit extends Component {
             <option value={category.name} key={category._id}>{category.name}</option>
         )
         return (
-            <div className="edit-location">
+            <div className="location-edit flex flex-colom">
                 {
                     this.props.match.params._id
                         ?
                         <Link to={`/locationDetails/${this.props.match.params._id}`}>Back</Link> :
-                        <Link to={`/`}>Back</Link>
+                        <Link to={`/`}><FontAwesomeIcon icon={faArrowLeft} /></Link>
                 }
                 <form onSubmit={this.handleSubmit}>
-                    <div><input className="edit-input" type="text" name="name" defaultValue={this.state.location.name} onChange={this.handleInputChange} placeholder="Name" required /></div>
-                    <div><input className="edit-input" type="text" name="adress" defaultValue={this.state.location.adress} onChange={this.handleInputChange} placeholder="Address" required /></div>
-                    <div><input className="edit-input" type="number" step="any" name="lat" defaultValue={this.state.location.lat} onChange={this.handleInputChange} placeholder="Langtitude" required /></div>
-                    <div><input className="edit-input" type="number" step="any" name="long" defaultValue={this.state.location.long} onChange={this.handleInputChange} placeholder="Longtitude" required /></div>
-                    <div><select defaultValue={this.categoryStore.categories[0]} onChange={this.handleInputChange}>
+                    <div className="edit-data">Name: <br/>
+                        <input className="edit-input" type="text" name="name" defaultValue={this.state.location.name} onChange={this.handleInputChange} required /></div>
+                    <div className="edit-data">Address: <br/>
+                        <input className="edit-input" type="text" name="adress" defaultValue={this.state.location.adress} onChange={this.handleInputChange} required /></div>
+                    <div className="edit-data">Coordinates (latitude): <br/>
+                        <input className="edit-input" type="number" step="any" name="lat" defaultValue={this.state.location.lat} onChange={this.handleInputChange} required /></div>
+                    <div className="edit-data">Coordinates (longitude): <br/>
+                        <input className="edit-input" type="number" step="any" name="long" defaultValue={this.state.location.long} onChange={this.handleInputChange} required /></div>
+                    <div className="edit-data">Category: <br/>
+                        <select defaultValue={this.categoryStore.categories[0]} onChange={this.handleInputChange}>
                         {categoryOptions}
                     </select></div>
                     <input className="submit" type="submit" />

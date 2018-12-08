@@ -2,7 +2,7 @@
 const defaultCategories = [
     {
         _id: 'a',
-        name: 'shoping'
+        name: 'shopping'
     },
     {
         _id: 'b',

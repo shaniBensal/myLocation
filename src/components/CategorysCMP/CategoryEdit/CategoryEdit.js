@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import { observer, inject } from 'mobx-react';
 
+import './CategoryEdit.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSave } from '@fortawesome/free-solid-svg-icons'
+
 @inject('store')
 @observer
 class CategoryEdit extends Component {
@@ -30,7 +34,7 @@ class CategoryEdit extends Component {
         return (
                 <div className="category-edit">
                     <input type="text" defaultValue={this.props.categoryToEdit.name} onChange={event => this.handleInputChange(event)} />
-                    <button type="submit" onClick={event => this.submit(this.props.onSubmit, event)}>save</button>
+                    <label type="submit" onClick={event => this.submit(this.props.onSubmit, event)}><FontAwesomeIcon icon={faSave} /></label>
                 </div>
                 )
             }

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './LocationDetails.css'
 import { observer, inject } from 'mobx-react';
 import LocationOnMap from '../../../components/LocationCMP/LocationOnMap/LocationOnMap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faEdit } from '@fortawesome/free-solid-svg-icons'
 
 @inject('store')
 @observer
@@ -24,14 +26,14 @@ class LocationDetails extends Component {
             showMap: copyOfShowMap
         });
   }
-
+  
   render() {
     const { location } = this.locationStore;
 
     return (
       <div className="location-details">
-        <div className="flex justify-space-between"><Link to={`/`}>Back</Link>
-          <Link to={`/locationEdit/${location._id}`}>Edit</Link>
+        <div className="flex justify-space-between"><Link to={`/`}><FontAwesomeIcon icon={faArrowLeft} /></Link>
+          <Link to={`/locationEdit/${location._id}`}><FontAwesomeIcon icon={faEdit} /></Link>
         </div>
         <div>
           <div className="location-details-row">Name: {location.name}</div>
