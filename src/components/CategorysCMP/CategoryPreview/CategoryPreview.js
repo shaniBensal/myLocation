@@ -24,8 +24,8 @@ class CategoryPreview extends Component {
         });
     }
 
-    selectCategory = (categoryId, onSelect) => {
-        onSelect(categoryId);
+    selectCategory = (category, onSelect) => {
+        onSelect(category);
     }
 
     remove = (event, onRemove, categoryId) => {
@@ -42,7 +42,7 @@ class CategoryPreview extends Component {
         const { editMode } = this.state
 
         return (
-            <div className="category-preview">
+            <div className="category-preview item-preview">
                 {
                     editMode ? <div> <CategoryEdit categoryToEdit={this.props.category}
                         onSubmit={this.submit} />
@@ -50,7 +50,7 @@ class CategoryPreview extends Component {
                     </div> :
                         <div className="flex justify-space-between">
                             <div>
-                                <label onClick={() => this.selectCategory(this.props.category._id, this.props.onSelect)}>
+                                <label onClick={() => this.selectCategory(this.props.category, this.props.onSelect)}>
                                     {this.props.category.name}
                                 </label>
                             </div>

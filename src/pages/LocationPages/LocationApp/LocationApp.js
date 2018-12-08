@@ -13,8 +13,8 @@ import { observer, inject } from 'mobx-react';
 @observer
 export default class LocationApp extends Component {
     state = {
-        locationList: [],
-        isFilteredList: false
+        isFilteredList: false,
+        sorted: false
     }
 
     locationStore = this.props.store.locationModule;
@@ -43,19 +43,21 @@ export default class LocationApp extends Component {
         this.locationStore.getLocations(null);
     }
 
-    // toggleSortedList = () => {
-    //     this.locationStore.sortLocations;
-    // };
+    toggleSortedList = () => {
+        this.setState({
+            sorted: !this.state.sorted
+        });
+    };
 
     render() {
-        const { locations } = this.locationStore;
-
+        let locations = null;
+        this.state.sorted ? locations = this.locationStore.sortLocations : locations = this.locationStore.locationsToSee
         return (
             <div className="location-app">
                 <div className="flex justify-space-around">
                     <img src={whereTogo} alt="Smiley face" />
                     <h1>My Locations! <label onClick={this.toggleSortedList}><FontAwesomeIcon icon={faSort} /></label></h1>
-                    <img src={map} alt="Smiley face"/>
+                    <img src={map} alt="Smiley face" />
                 </div>
                 {this.state.isFilteredList ? <button onClick={this.showAllLocations}>Show All</button> : ''}
                 <LocationList locations={locations}

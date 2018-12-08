@@ -61,7 +61,7 @@ class LocationEdit extends Component {
                     this.props.match.params._id
                         ?
                         <Link to={`/locationDetails/${this.props.match.params._id}`}>Back</Link> :
-                        <Link to={`/location`}>Back</Link>
+                        <Link to={`/`}>Back</Link>
                 }
                 <form onSubmit={this.handleSubmit}>
                     <div><input className="edit-input" type="text" name="name" defaultValue={this.state.location.name} onChange={this.handleInputChange} placeholder="Name" required /></div>

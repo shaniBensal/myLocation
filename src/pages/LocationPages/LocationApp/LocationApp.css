@@ -1,15 +1,4 @@
 
-.location-app{
-    margin-right: 40px;
-}
-
-.head{
-    text-align: center;
-}
-
-.location-app img{
-    height: 140px;
-}
 
 .add-button{
     border-radius: 50%;
@@ -18,5 +7,5 @@
     position: sticky;
     z-index: 1;
     bottom: 10px;
-    left: 15px;
+    right: 20px;
   }

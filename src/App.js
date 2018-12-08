@@ -23,8 +23,8 @@ class App extends Component {
         <div className="app">
           <NavBar />
           <Switch>
-            <Route component={LocationPage} path='/location'/>
-            <Route component={CategoryPage} path='/category'/>            
+            <Route exact component={LocationPage} path='/'/>
+            <Route exact component={CategoryPage} path='/category'/>            
             <Route exact component={LocationDetails} path='/locationDetails/:_id' />
             <Route exact component={LocationEdit} path='/locationEdit/:_id?' />
             <Route exact component={AboutMe} path='/about-me' />

@@ -6,8 +6,8 @@ const remove = (onRemoveCategory, categoryId) => {
     onRemoveCategory(categoryId);
 };
 
-const select = (onSelectCategory, categoryId) => {
-    onSelectCategory(categoryId);
+const select = (onSelectCategory, category) => {
+    onSelectCategory(category);
 };
 
 const CategoryList = (props) => {
@@ -15,7 +15,7 @@ const CategoryList = (props) => {
         return (
             <li key={category._id} className="category-item list-item">
                 <CategoryPreview category={category}
-                    onSelect={categoryId => select(props.onSelectCategory, categoryId)}
+                    onSelect={category => select(props.onSelectCategory, category)}
                     onRemove={categoryId => remove(props.onRemoveCategory, categoryId)} />
             </li>
         )

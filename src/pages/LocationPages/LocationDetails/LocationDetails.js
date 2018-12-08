@@ -30,15 +30,14 @@ class LocationDetails extends Component {
 
     return (
       <div className="location-details">
-        <div className="details-links"><Link to={`/location`}>Back</Link>
+        <div className="flex justify-space-between"><Link to={`/`}>Back</Link>
           <Link to={`/locationEdit/${location._id}`}>Edit</Link>
         </div>
-        <div className="location-details-body">
-          <div className="location-details-row">{location.name}</div>
-          <div className="location-details-row">{location.adress}</div>
-          <div className="location-details-row">{location.lat}</div>
-          <div className="location-details-row">{location.long}</div>
-          <div className="location-details-row">{location.category}</div>
+        <div>
+          <div className="location-details-row">Name: {location.name}</div>
+          <div className="location-details-row">Adress: {location.adress}</div>
+          <div className="location-details-row">Coordinates (latitude, longitude): {location.lat}, {location.long}</div>
+          <div className="location-details-row">Category: {location.category}</div>
           <button onClick={this.toggleMap}>show location on map</button>
           
         {(this.state.showMap? 

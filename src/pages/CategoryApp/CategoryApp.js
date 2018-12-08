@@ -32,7 +32,7 @@ export default class CategoryApp extends Component {
 
     setFilterCategory(categoryId) {
         this.locationStore.setCategoryFilter(categoryId);
-        this.props.history.push('/location')
+        this.props.history.push('/')
     }
 
     handleInputChange = (value) => {
@@ -61,7 +61,7 @@ export default class CategoryApp extends Component {
         const { editMode } = this.state
         return (
             <div className="category-app">
-                <div className="flex justify-space-between">
+                <div className="flex justify-space-around">
                     <img src={gym} alt="Smiley face" />
                     <h1>My Categories!</h1>
                     <img src={rest} alt="Smiley face" />
@@ -73,7 +73,7 @@ export default class CategoryApp extends Component {
                         : <button onClick={this.toggleEdit}> add new category</button>
                 }
                 <CategoryList categories={categories}
-                    onSelectCategory={categoryId => this.setFilterCategory(categoryId)}
+                    onSelectCategory={category => this.setFilterCategory(category)}
                     onRemoveCategory={categoryId => this.removeCategory(categoryId)} />
             </div>
         );

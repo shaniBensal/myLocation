@@ -1,5 +1,4 @@
 import uniqid from 'uniqid'
-// import locations from './locations.json'
 import storageService from './storageService'
 import defaultData from './defaultData'
 
@@ -18,17 +17,10 @@ const locations = storageService.loadFromStorage(LOCATION_KEY) || defaultData.de
 //   }
 // }
 
-function getLocations(categoryId) {
+function getLocations() {
   return new Promise((resolve, reject) => {
     var locationsToReturn = locations
     storageService.saveToStorage(LOCATION_KEY, locationsToReturn)
-    if(categoryId){
-      let categoryList = (storageService.loadFromStorage('CATEGORY_LIST')) || (defaultData.defaultCategories);
-      let choosenCategory = categoryList.find(category => category._id === categoryId)
-      locationsToReturn = locationsToReturn.filter(location => {
-        return location.category === choosenCategory.name
-      })
-    }
     resolve(locationsToReturn)
   })
 }

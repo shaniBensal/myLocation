@@ -1,0 +1,17 @@
+
+.location-details{
+    max-width: 500px;
+    border: black solid 1px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    padding: 10px 20px;
+    position: relative;
+    left: 25%;
+}
+
+.location-details-row {
+    margin: 10px 0px; 
+  }
+  
+
+  

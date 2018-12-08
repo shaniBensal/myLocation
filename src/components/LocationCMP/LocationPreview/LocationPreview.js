@@ -11,9 +11,9 @@ const remove = (event, onRemove, locationId) => {
 
 const LocationPreview = (props) => {
     return (
-        <div className="location-preview">
+        <div className="location-preview item-preview">
             <div className="flex justify-space-between">
-                <ul>
+                <ul className= 'margin-zero padding-zero'>
                     <li className="list-item">
                         Name: {props.location.name}
                     </li>

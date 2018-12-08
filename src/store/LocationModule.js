@@ -16,15 +16,20 @@ class LocationModule {
     this.locationService = locationService;
   }
 
-  @computed 
-  get sortLocations() {
-    return this.locations.reverse()
+  @computed
+  get locationsToSee() {
+    return this.categoryFilter ? this.locations.filter(location => location.category === this.categoryFilter.name) : this.locations;
+  }
+
+  @computed
+  get sortLocations(){
+    return this.locationsToSee.slice().reverse()
   }
 
   // actions (allow to do manipullation on the data)
   @action
-  getLocations(categoryId) {
-    this.locationService.getLocations(categoryId).then(locations => {
+  getLocations() {
+    this.locationService.getLocations().then(locations => {
       this.locations = locations;
     });
   }
