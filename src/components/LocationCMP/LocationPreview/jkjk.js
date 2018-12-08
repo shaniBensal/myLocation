@@ -1,19 +1,3 @@
-import React from 'react';
-
-import './LocationPreview.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-
-const remove = (event, onRemove, locationId) => {
-    event.preventDefault();
-    onRemove(locationId);
-};
-const selectLocation = (event,locationId) => {
-    // event.preventDefault();    
-    window.navigator.vibrate(1000);
-    // this.props.history.push(`locationDetails/`+locationId)
-}
-
 const LocationPreview = (props) => {
     return (
           <div className="location-preview item-preview" onClick={event => selectLocation(event, props.location._id)} >
