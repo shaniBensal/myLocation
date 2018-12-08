@@ -9,7 +9,7 @@ const remove = (onRemoveLocation, locationId) => {
 
 const selectLocation = (event) => {
     event.preventDefault();
-    navigator.vibrate(100);
+    window.navigator.vibrate(200);
 }
 
 const LocationList = (props) => {
