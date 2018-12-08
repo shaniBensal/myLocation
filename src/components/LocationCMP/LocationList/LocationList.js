@@ -1,23 +1,18 @@
 import React from 'react';
 import LocationPreview from '../LocationPreview/LocationPreview'
 import './LocationList.css'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const remove = (onRemoveLocation, locationId) => {
     onRemoveLocation(locationId);
 };
-
-const selectLocation = (event) => {
-    event.preventDefault();
-    window.navigator.vibrate(200);
-}
 
 const LocationList = (props) => {
     const locationPreview = props.locations.map((location) => {
         return (
             <li key={location._id} className="location-list-item list-item">
                 {/* <Link to={`/locationDetails/${location._id}`}><LocationPreview onClick={event = event => selectLocation(event)} location={location} onRemove={locationId => remove(props.onRemoveLocation, locationId)} /></Link> */}
-                <LocationPreview onClick={event => selectLocation(event)} location={location} onRemove={locationId => remove(props.onRemoveLocation, locationId)} />
+                <LocationPreview location={location} onRemove={locationId => remove(props.onRemoveLocation, locationId)} />
             </li>
         )
     });

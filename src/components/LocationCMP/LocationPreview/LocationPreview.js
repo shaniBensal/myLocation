@@ -8,12 +8,17 @@ const remove = (event, onRemove, locationId) => {
     event.preventDefault();
     onRemove(locationId);
 };
+const selectLocation = () => {
+    console.log('hi');
+
+    navigator.vibrate(1000);
+}
 
 const LocationPreview = (props) => {
     return (
-        <div className="location-preview item-preview">
+        <div className="location-preview item-preview" onClick={event => selectLocation(event)} >
             <div className="flex justify-space-between">
-                <ul className= 'margin-zero padding-zero'>
+                <ul className='margin-zero padding-zero'>
                     <li className="list-item">
                         Name: {props.location.name}
                     </li>
