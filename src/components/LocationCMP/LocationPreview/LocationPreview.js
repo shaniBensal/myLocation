@@ -8,10 +8,10 @@ const remove = (event, onRemove, locationId) => {
     event.preventDefault();
     onRemove(locationId);
 };
-const selectLocation = () => {
-    console.log('hi');
-
-    navigator.vibrate(1000);
+function selectLocation (event) {
+    console.log('hi', navigator.vibrate);
+    event.preventDefault();
+    window.navigator.vibrate(1000);
 }
 
 const LocationPreview = (props) => {
