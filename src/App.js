@@ -38,7 +38,6 @@ class App extends Component {
             <Route exact component={CategoryPage} path='/category' />
             <Route exact component={LocationDetails} path='/locationDetails/:_id' />
             <Route exact component={LocationEdit} path='/locationEdit/:_id?' />
-            <Route exact component={AboutMe} path='/about-me' />
           </Switch>
         </div>
       </Router>
