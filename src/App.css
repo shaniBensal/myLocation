@@ -30,9 +30,9 @@ html {
   overflow-y: auto; 
 }
 
-.app [class^="flaticon-"]:before,
+/* .app [class^="flaticon-"]:before,
 .app [class*=" flaticon-"]:before,
 .app [class^="flaticon-"]:after,
 .app [class*=" flaticon-"]:after {
     margin: 0; 
-}
+} */

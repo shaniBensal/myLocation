@@ -2,15 +2,15 @@
 const defaultCategories = [
     {
         _id: 'a',
-        name: 'shopping'
+        'name': 'shopping'
     },
     {
         _id: 'b',
-        name: 'gym'
+        'name': 'gym'
     },
     {
         _id: 'c',
-        name: 'resturant'
+        'name': 'resturant'
     }
 ]
 
@@ -19,8 +19,8 @@ const defaultCategories = [
           _id: '5a56640269f443a5d64b32ca',
           name: 'Ha Garage',
           adress: 'Herzl St 151, Rishon LeTsiyon',
-          lat: '31.947350',
-          long: '34.801890',
+          lat: 31.947350,
+          long: 34.801890,
           category: 'resturant'
         },
         {
@@ -29,7 +29,7 @@ const defaultCategories = [
           adress: 'David Saharov St 21, Rishon LeTsiyon',
           lat: 31.990628,
           long: 34.774621,
-          category: 'shoping'
+          category: 'shopping'
         },
         {
           _id: '5a56640252d6acddd183d319',

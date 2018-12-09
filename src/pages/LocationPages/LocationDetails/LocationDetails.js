@@ -9,8 +9,8 @@ import { faArrowLeft, faEdit } from '@fortawesome/free-solid-svg-icons'
 @inject('store')
 @observer
 class LocationDetails extends Component {
-  state ={
-    showMap:false
+  state = {
+    showMap: false
   }
 
   locationStore = this.props.store.locationModule;
@@ -19,14 +19,14 @@ class LocationDetails extends Component {
     const locationId = this.props.match.params._id;
     this.locationStore.getLocationById(locationId)
   }
-  toggleMap =()=>{
+  toggleMap = () => {
     let copyOfShowMap = { ...this.state.showMap };
     copyOfShowMap = !(this.state.showMap);
-        this.setState({
-            showMap: copyOfShowMap
-        });
+    this.setState({
+      showMap: copyOfShowMap
+    });
   }
-  
+
   render() {
     const { location } = this.locationStore;
 
@@ -41,16 +41,16 @@ class LocationDetails extends Component {
           <div className="location-details-row">Coordinates (latitude, longitude): {location.lat}, {location.long}</div>
           <div className="location-details-row">Category: {location.category}</div>
           <button onClick={this.toggleMap}>show location on map</button>
-          
-        {(this.state.showMap? 
-        <LocationOnMap googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT6kgeeG5OSYsEuffWJVuFeRPhnOa0Di0"
-        loadingElement={<div style={{ height: `80%` }} />}
-        containerElement={<div style={{ height: `400px` }} />}
-        mapElement={<div style={{ height: `80%` }} />}
-        lat={location.lat}
-        long={location.long}
-        isMarkerShown={true}/>
-        :<div/>)}
+
+          {(this.state.showMap ?
+            <LocationOnMap googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT6kgeeG5OSYsEuffWJVuFeRPhnOa0Di0"
+              loadingElement={<div style={{ height: `80%` }} />}
+              containerElement={<div style={{ height: `400px` }} />}
+              mapElement={<div style={{ height: `80%` }} />}
+              lat={location.lat}
+              long={location.long}
+              isMarkerShown={true} />
+            : <div />)}
         </div>
       </div>
     )

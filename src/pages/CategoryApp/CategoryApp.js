@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CategoryList from '../../components/CategorysCMP/CategoryList/CategoryList.js';
 import CategoryEdit from '../../components/CategorysCMP/CategoryEdit/CategoryEdit.js';
 
+
 import gym from '../../assets/categorisPic/gym.jpg';
 import rest from '../../assets/categorisPic/restaurant.jpg';
 
@@ -44,7 +45,7 @@ export default class CategoryApp extends Component {
         });
     }
 
-    submit = () => {
+    submitUpdatedCategory = () => {
         this.toggleEdit();
         this.categoryStore.getCategories();
     }
@@ -68,8 +69,8 @@ export default class CategoryApp extends Component {
                     <img src={rest} alt="Smiley face" />
                 </div>
                 {
-                    editMode ? <div className="edit-category flex"> <CategoryEdit categoryToEdit={this.state.newCategory}
-                        onSubmit={this.submit} />
+                    editMode ? <div className="edit-category item-preview flex"> <CategoryEdit categoryToEdit={this.state.newCategory}
+                        onSubmit={this.submitUpdatedCategory} />
                         <label className="cancel-label" onClick={this.toggleEdit}><FontAwesomeIcon icon={faTimes} /></label> </div>
                         : <button onClick={this.toggleEdit}> add new category</button>
                 }
